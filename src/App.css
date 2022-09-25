@@ -1,0 +1,199 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.navbar-dark {
+  background-color: #043d5d;
+}
+
+.footer{
+  background-color: #043d5d;
+  margin:0px auto;
+  padding: 5px 0px 5px 0px;
+}
+
+.jumbotron {
+  padding: 90px 0px 24px 0px;
+  /* background-color: rgb(37, 103, 148, 0.7); */
+  background-image: linear-gradient(-45deg,
+  rgba(255,162,52,0.9), 
+  rgba(37, 103, 148, 0.9),
+  rgba(205,162,152,0.9));
+  background-size: 200% 200%;
+  animation: movingBackgroundGradient 2s linear infinite alternate;
+}
+.row {
+  --bs-gutter-x: 0rem;
+}
+
+.summary-text {
+  text-align: left;
+  justify-content: center;
+  color: black;
+}
+
+.summary-spinner {
+  padding: 100px 100px 100px 100px;
+  color: #333399;
+}
+
+.skill-spinner {
+  padding: 10px 10px 10px 10px;
+  color: rgba(17, 231, 81, 0.9);
+}
+
+.img-fluid {
+  max-width: 266px;
+  max-height: 266px;
+}
+
+.img-skill {
+  max-width: 120px;
+  max-height: 120px;
+}
+
+.wave {
+  animation-name: wave-animation; 
+  animation-duration: 2.1s; 
+  animation-iteration-count: infinite; 
+  transform-origin: 70% 70%; 
+  display: inline-block;
+}
+
+@keyframes wave-animation {
+  0% {
+    transform: rotate(0deg);
+  }
+  10% {
+    transform: rotate(14deg);
+  } 
+  20% {
+    transform: rotate(-8deg);
+  }
+  30% {
+    transform: rotate(14deg);
+  }
+  40% {
+    transform: rotate(-4deg);
+  }
+  50% {
+    transform: rotate(10deg);
+  }
+  60% {
+    transform: rotate(0deg);
+  } 
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.heading {
+  font-size: 2.4em !important;
+  padding-left: 50px !important;
+  padding-bottom: 15px;
+}
+
+.heading-name {
+  font-size: 2em !important;
+  padding-left: 45px !important;
+}
+
+.text-heading {
+  font-size: 2em !important;
+}
+
+.certificate-links {
+  text-decoration: none;
+  color: hotpink;
+}
+
+.main-name {
+  color: rgba(17, 231, 81, 0.9);
+}
+
+.type-text {
+  font-size: 2em !important;
+  color: rgba(17, 231, 81, 0.9);
+}
+
+.content {
+  padding: 55px 0px 55px 0px;
+  background-image: linear-gradient(45deg,
+  rgba(205,162,152,0.9),
+  rgba(37, 103, 148, 0.9),
+  rgba(255,162,52,0.9));
+  background-size: 200% 200%;
+  animation: movingBackgroundGradient 2s linear infinite alternate;
+}
+
+.about-card {
+  margin: 15px;
+  padding: 10px;
+  background-color: #00FFFF;
+}
+
+.certificate-card {
+  margin: 15px;
+  padding: 10px;
+  background-color: #00FFFF;
+}
+
+.certificate-card:hover {
+  box-shadow: 10px 10px 0px hotpink;
+  top: 5px;
+  left: -5px;
+}
+
+.about-card:hover {
+  background-color: #FF96AD;
+  box-shadow: 0 0 5px #FF96AD, 0 0 25px
+  #FF96AD, 0 0 50px #FF96AD, 0 0 200px #FF96AD;
+}
+
+.content-row {
+  margin: 15px;
+}
+
+@keyframes movingBackgroundGradient {
+  from { background-position: 0 0; }
+  to { background-position: 100% 100%; }
+}
+
+.footer-copywright {
+  color: white;
+}
