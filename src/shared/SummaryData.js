@@ -194,7 +194,7 @@ export const CERTIFICATIONS_TEXT = {
 export const CONTACT_TEXT = {
     ques: "HOW CAN YOU REACH OUT TO ME?",
     text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum",
-    imgUrl: "https://media-exp1.licdn.com/dms/image/C5603AQHlTqHHC94Hwg/profile-displayphoto-shrink_200_200/0/1608005668413?e=1659571200&v=beta&t=OJOnj15-2b7seRuOVaa5Q91NzKp8diIsHHCIp9bDYls",
+    imgUrl: "https://avatars.githubusercontent.com/u/75945683",
     ghLink: "",
     lnLink: ""
 }
