@@ -22,7 +22,7 @@ const CertificateImageComponent = ({url="", alt="PHOTO"}) => {
         return(<CardImg src={URL.createObjectURL(imageData.data)} className="img-skill img-responsive rounded-circle m-auto" alt={alt}/>);
     } else {
         getImageFromUrl();
-        return(<Spinner className='skill-spinner'/>);
+        return(<Spinner className='skill-spinner m-auto'/>);
     }
 }
 

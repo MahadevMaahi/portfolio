@@ -2,6 +2,7 @@ import React from 'react';
 import { Row, Col } from "reactstrap";
 import { AiFillGithub } from "react-icons/ai";
 import { FaLinkedinIn } from "react-icons/fa";
+import { FaCode } from "react-icons/fa";
 import { CONTACT_TEXT } from '../shared/SummaryData';
 
 const Description = () => {
@@ -18,11 +19,11 @@ const CopyRight = () => {
   );
 }
 
-const ContactLinks = ({ghLink, lnLink}) => {
+const ContactLinks = ({ghLink, lnLink, lcLink}) => {
 
   return(
     <Row>
-      <Col md="6">
+      <Col md="4">
       <a
                 href={ghLink}
                 style={{ color: "white" }}
@@ -32,13 +33,24 @@ const ContactLinks = ({ghLink, lnLink}) => {
                 <AiFillGithub />
               </a>
       </Col>
-      <Col md="6">
+      <Col md="4">
       <a
         href={lnLink}
+        style={{ color: "white" }}
         target="_blank" 
         rel="noopener noreferrer"
       >
         <FaLinkedinIn />
+      </a>
+      </Col>
+      <Col md="4">
+      <a
+        href={lcLink}
+        style={{ color: "white" }}
+        target="_blank" 
+        rel="noopener noreferrer"
+      >
+        <FaCode />
       </a>
       </Col>
     </Row>
@@ -55,7 +67,7 @@ const FooterRow = () => {
         <CopyRight />
       </Col>
       <Col md="2" className="footer-copywright">
-        <ContactLinks ghLink={CONTACT_TEXT.ghLink} lnLink={CONTACT_TEXT.lnLink}/>
+        <ContactLinks ghLink={CONTACT_TEXT.ghLink} lnLink={CONTACT_TEXT.lnLink} lcLink={CONTACT_TEXT.lcLink}/>
       </Col>
     </>
   );

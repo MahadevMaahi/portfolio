@@ -122,7 +122,51 @@ export const SKILLS_TEXT = {
 export const PROJECTS_TEXT = {
     ques: "WHAT DID I DO?",
     text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum",
-    imgUrl: "https://cdn.dribbble.com/users/589629/screenshots/4338482/icons-dribble.gif"
+    imgUrl: "https://cdn.dribbble.com/users/589629/screenshots/4338482/icons-dribble.gif",
+    projectData: [
+        {
+            url: "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
+            link: "https://github.com/MahadevMaahi/aws-dev-hour-repo",
+            title: "AWS Dev Hour",
+            description: "CSS"
+        },
+        {
+            url: "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
+            link: "https://github.com/MahadevMaahi/go-grpc",
+            title: "GO GRPC",
+            description: "CSS"
+        },
+        {
+            url: "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
+            link: "https://github.com/MahadevMaahi/gin-jwt-authentication",
+            title: "GIN JWT Auth",
+            description: "CSS"
+        },
+        {
+            url: "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
+            link: "https://github.com/MahadevMaahi/aws-step-function-flow",
+            title: "Step Function",
+            description: "CSS"
+        },
+        {
+            url: "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
+            link: "https://github.com/MahadevMaahi/go-rest-api",
+            title: "GO REST API",
+            description: "CSS"
+        },
+        {
+            url: "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
+            link: "https://github.com/MahadevMaahi/leetcode-solutions",
+            title: "Leetcode",
+            description: "CSS"
+        },
+        {
+            url: "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
+            link: "https://github.com/MahadevMaahi/portfolio",
+            title: "Portfolio",
+            description: "CSS"
+        },
+    ]
 }
 export const CERTIFICATIONS_TEXT = {
     ques: "WHAT DID I EARN?",
@@ -195,6 +239,7 @@ export const CONTACT_TEXT = {
     ques: "HOW CAN YOU REACH OUT TO ME?",
     text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum",
     imgUrl: "https://avatars.githubusercontent.com/u/75945683",
-    ghLink: "",
-    lnLink: ""
+    ghLink: "https://github.com/MahadevMaahi",
+    lnLink: "https://in.linkedin.com/in/badini-sai-mahadev",
+    lcLink: "https://leetcode.com/mahadevvone/"
 }

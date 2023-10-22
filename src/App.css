@@ -139,7 +139,12 @@
 
 .certificate-links {
   text-decoration: none;
-  color: hotpink;
+  color: grey;
+}
+
+.project-links {
+  text-decoration: none;
+  color: grey;
 }
 
 .main-name {
@@ -161,6 +166,16 @@
   animation: movingBackgroundGradient 2s linear infinite alternate;
 }
 
+.contact-content {
+  padding: 90px 0px 90px 0px;
+  background-image: linear-gradient(45deg,
+  rgba(205,162,152,0.9),
+  rgba(37, 103, 148, 0.9),
+  rgba(255,162,52,0.9));
+  background-size: 200% 200%;
+  animation: movingBackgroundGradient 2s linear infinite alternate;
+}
+
 .about-card {
   margin: 15px;
   padding: 10px;
@@ -173,10 +188,21 @@
   background-color: #00FFFF;
 }
 
+.project-card {
+  margin: 15px;
+  padding: 10px;
+  background-color: #00FFFF;
+}
+
+.project-card:hover {
+  box-shadow: inset -10.5rem 0 0 0 hotpink, inset 10.5rem 0 0 0 hotpink;
+  transition: 0.4s ease-in;
+}
+
 .certificate-card:hover {
-  box-shadow: 10px 10px 0px hotpink;
-  top: 5px;
-  left: -5px;
+  border: 2px solid hotpink;
+  color: hotpink;
+  background-color: #17181c;
 }
 
 .about-card:hover {

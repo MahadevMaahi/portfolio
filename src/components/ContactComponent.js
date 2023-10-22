@@ -4,7 +4,7 @@ import { CONTACT_TEXT } from '../shared/SummaryData';
 
 const ContactContent = () => {
     return(
-        <div className='content'>
+        <div className='contact-content'>
 
         </div>
     );
