@@ -10,7 +10,10 @@ const Description = ({info, ques}) => {
             <CardBody>
                 <Typewriter 
                     onInit={(typewriter) => {
-                        typewriter.typeString(info).start()
+                        typewriter
+                        .changeDelay(10)
+                        .typeString(info)
+                        .start()
                     }}/>
             </CardBody>
             </div>
