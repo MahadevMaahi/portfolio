@@ -121,49 +121,61 @@ export const SKILLS_TEXT = {
 export const PROJECTS_TEXT = {
     ques: "WHAT DID I DO?",
     text: "While my primary focus has been on my professional roles, I actively engage in personal development through side projects. I've built a portfolio web app using React and Node.js, explored AWS services by creating a workflow application, and experimented with Go for building authentication and authorization services. These projects have not only enhanced my technical skills in web development, backend technologies, and cloud services but also fostered my problem-solving abilities, improved my time management, and increased my confidence in tackling challenging projects. This continuous learning approach allows me to broaden my expertise and contribute more effectively to a wider range of projects within my organization.",
-    imgUrl: "https://cdn.dribbble.com/users/589629/screenshots/4338482/icons-dribble.gif",
+    imgUrl: "https://i.pinimg.com/originals/60/69/06/6069060ed00f7ecc749c32a5dd84b188.gif",
     projectData: [
+        {
+            url: "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
+            link: "https://github.com/MahadevMaahi/SampleApp",
+            title: "Android App",
+            description: "An Android application demonstrating clean architecture principles with multiple modules. Features include CameraX, Canvas, Jetpack Compose, Retrofit, Dagger 2, Coroutines & Flows, and MVVM architecture."
+        },
+        {
+            url: "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
+            link: "https://github.com/MahadevMaahi/low-level-design",
+            title: "Low Level Design",
+            description: "A repository created during my low-level system design learning journey, intended to improve my understanding and potentially assist fellow developers."
+        },
         {
             url: "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
             link: "https://github.com/MahadevMaahi/aws-dev-hour-repo",
             title: "AWS Dev Hour",
-            description: "CSS"
+            description: "A complete serverless project demonstrating AWS expertise. Leveraging Lambda, Rekognition, API Gateway, and CI/CD pipelines, this project showcases the implementation of a serverless architecture."
         },
         {
             url: "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
             link: "https://github.com/MahadevMaahi/go-grpc",
             title: "GO GRPC",
-            description: "CSS"
+            description: "A sample project developed to gain practical experience with Go, gRPC, and Protobuf. The project consists of two microservices communicating with each other using gRPC and leveraging Protobuf for data serialization."
         },
         {
             url: "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
             link: "https://github.com/MahadevMaahi/gin-jwt-authentication",
             title: "GIN JWT Auth",
-            description: "CSS"
+            description: "A learning project focused on building a robust authentication system. This project implements JWT token generation and a refresh token mechanism, adhering to best practices for secure and reliable authentication."
         },
         {
             url: "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
             link: "https://github.com/MahadevMaahi/aws-step-function-flow",
             title: "Step Function",
-            description: "CSS"
+            description: "A learning project focused on AWS Step Functions. This project involved creating a basic state machine to gain practical experience with serverless workflows and enhance my understanding of serverless application development."
         },
         {
             url: "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
             link: "https://github.com/MahadevMaahi/go-rest-api",
             title: "GO REST API",
-            description: "CSS"
+            description: "A minor project undertaken to learn about REST API development in Go. This project involved creating a simple REST API with basic CRUD operations."
         },
         {
             url: "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
             link: "https://github.com/MahadevMaahi/leetcode-solutions",
             title: "Leetcode",
-            description: "CSS"
+            description: "A repository containing my successful LeetCode submissions, providing a quick reference for myself and potentially contributing to the LeetCode community"
         },
         {
             url: "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
             link: "https://github.com/MahadevMaahi/portfolio",
             title: "Portfolio",
-            description: "CSS"
+            description: "A personal portfolio website built from scratch and hosted on GitHub Pages. This repository provides the source code for aspiring developers to create their own unique portfolio websites."
         },
     ]
 }
@@ -173,70 +185,58 @@ export const CERTIFICATIONS_TEXT = {
     imgUrl: "https://cdn.dribbble.com/users/3653942/screenshots/6983076/com22p_1.gif",
     certificationSet: [
         {
-            url: "https://i0.wp.com/3minute.club/wp-content/uploads/2019/03/Udemy-logo.png?resize=300%2C300",
-            description: "MERN STACK",
+            url: "https://d1.awsstatic.com/logos/aws-logo-lockups/poweredbyaws/PB_AWS_logo_RGB_stacked_REV_SQ.91cd4af40773cbfbd15577a3c2b8a346fe3e8fa2.png",
+            description: "AWS Solution Architect",
+            alt: "AWS SAA",
+            link: "https://cp.certmetrics.com/amazon/en/public/verify/credential/KEHHNPJJNBVQ1739"
+        },
+        {
+            url: "https://d1.awsstatic.com/logos/aws-logo-lockups/poweredbyaws/PB_AWS_logo_RGB_stacked_REV_SQ.91cd4af40773cbfbd15577a3c2b8a346fe3e8fa2.png",
+            description: "AWS Developer Associate",
+            alt: "AWS DA",
+            link: "https://cp.certmetrics.com/amazon/en/public/verify/credential/PDK1V31KTBR1Q1S6"
+        },
+        {
+            url: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Coursera-Logo_600x600.svg/1200px-Coursera-Logo_600x600.svg.png",
+            description: "Deep Learning",
+            alt: "Deep learning course on coursera",
+            link: "https://www.coursera.org/account/accomplishments/specialization/SZZPFW8VWBVV"
+        },
+        {
+            url: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Coursera-Logo_600x600.svg/1200px-Coursera-Logo_600x600.svg.png",
+            description: "Blockchain",
+            alt: "Block chain and smart contracts course on coursera",
+            link: "https://www.coursera.org/account/accomplishments/specialization/6CCAXHSX9YUV"
+        },
+        {
+            url: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Coursera-Logo_600x600.svg/1200px-Coursera-Logo_600x600.svg.png",
+            description: "Computer Communications",
+            alt: "Computer Communications course on coursera",
+            link: "https://www.coursera.org/account/accomplishments/specialization/KJGHVNEAMGKF"
+        },
+        {
+            url: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Coursera-Logo_600x600.svg/1200px-Coursera-Logo_600x600.svg.png",
+            description: "Linux",
+            alt: "linux Basic commands",
+            link: "https://www.coursera.org/account/accomplishments/specialization/MZ97KJJ477Q3"
+        },
+        {
+            url: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Coursera-Logo_600x600.svg/1200px-Coursera-Logo_600x600.svg.png",
+            description: "MERN Stack",
             alt: "REACT FRAMEWORK",
-            link: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Coursera-Logo_600x600.svg/1200px-Coursera-Logo_600x600.svg.png"
+            link: "https://www.coursera.org/account/accomplishments/specialization/PVH7ZWZS4UEE"
         },
         {
             url: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Coursera-Logo_600x600.svg/1200px-Coursera-Logo_600x600.svg.png",
             description: "MERN STACK",
-            alt: "REACT FRAMEWORK",
-            link: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Coursera-Logo_600x600.svg/1200px-Coursera-Logo_600x600.svg.png"
-        },
-        {
-            url: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Coursera-Logo_600x600.svg/1200px-Coursera-Logo_600x600.svg.png",
-            description: "MERN STACK",
-            alt: "REACT FRAMEWORK",
-            link: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Coursera-Logo_600x600.svg/1200px-Coursera-Logo_600x600.svg.png"
-        },
-        {
-            url: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Coursera-Logo_600x600.svg/1200px-Coursera-Logo_600x600.svg.png",
-            description: "MERN STACK",
-            alt: "REACT FRAMEWORK",
-            link: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Coursera-Logo_600x600.svg/1200px-Coursera-Logo_600x600.svg.png"
-        },
-        {
-            url: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Coursera-Logo_600x600.svg/1200px-Coursera-Logo_600x600.svg.png",
-            description: "MERN STACK",
-            alt: "REACT FRAMEWORK",
-            link: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Coursera-Logo_600x600.svg/1200px-Coursera-Logo_600x600.svg.png"
-        },
-        {
-            url: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Coursera-Logo_600x600.svg/1200px-Coursera-Logo_600x600.svg.png",
-            description: "MERN STACK",
-            alt: "REACT FRAMEWORK",
-            link: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Coursera-Logo_600x600.svg/1200px-Coursera-Logo_600x600.svg.png"
-        },
-        {
-            url: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Coursera-Logo_600x600.svg/1200px-Coursera-Logo_600x600.svg.png",
-            description: "MERN STACK",
-            alt: "REACT FRAMEWORK",
-            link: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Coursera-Logo_600x600.svg/1200px-Coursera-Logo_600x600.svg.png"
-        },
-        {
-            url: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Coursera-Logo_600x600.svg/1200px-Coursera-Logo_600x600.svg.png",
-            description: "MERN STACK",
-            alt: "REACT FRAMEWORK",
-            link: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Coursera-Logo_600x600.svg/1200px-Coursera-Logo_600x600.svg.png"
-        },
-        {
-            url: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Coursera-Logo_600x600.svg/1200px-Coursera-Logo_600x600.svg.png",
-            description: "MERN STACK",
-            alt: "REACT FRAMEWORK",
-            link: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Coursera-Logo_600x600.svg/1200px-Coursera-Logo_600x600.svg.png"
-        },
-        {
-            url: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Coursera-Logo_600x600.svg/1200px-Coursera-Logo_600x600.svg.png",
-            description: "MERN STACK",
-            alt: "REACT FRAMEWORK",
-            link: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Coursera-Logo_600x600.svg/1200px-Coursera-Logo_600x600.svg.png"
+            alt: "GO Lang",
+            link: "https://www.coursera.org/account/accomplishments/specialization/4TJJFP8EZD7D"
         }
     ]
 }
 export const CONTACT_TEXT = {
     ques: "HOW CAN YOU REACH OUT TO ME?",
-    text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum",
+    text: "I am an active member of the developer community and eager to connect with fellow professionals. Feel free to reach out to me on LinkedIn or GitHub.I am always open to discussing exciting projects and career opportunities. I believe in the power of open-source collaboration and encourage contributions to my repositories. My projects are designed to be accessible and I welcome forks and improvements from the community. I am passionate about learning and growth, and I believe that by sharing knowledge and collaborating on projects, we can all achieve more. I am particularly interested in AI/ML, cloud computing, mobile development.I look forward to connecting with you and exploring potential collaborations",
     imgUrl: "https://avatars.githubusercontent.com/u/75945683",
     ghLink: "https://github.com/MahadevMaahi",
     lnLink: "https://in.linkedin.com/in/badini-sai-mahadev",
