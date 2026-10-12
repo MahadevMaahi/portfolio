@@ -1,71 +1,68 @@
 import React, { useState } from 'react';
-import { Navbar, NavbarBrand, Nav, NavbarToggler, Collapse, NavItem } from 'reactstrap';
 import { NavLink } from 'react-router-dom';
-import { BiHome } from "react-icons/bi";
-import { FaInfo } from "react-icons/fa";
-import { GiSkills } from "react-icons/gi";
-import { GoPerson } from "react-icons/go";
-import { VscGithubAlt } from "react-icons/vsc";
-import { AiOutlineSafetyCertificate } from "react-icons/ai";
-import { TiContacts } from "react-icons/ti";
+import { BiHome } from 'react-icons/bi';
+import { FaInfo, FaBriefcase } from 'react-icons/fa';
+import { GiSkills } from 'react-icons/gi';
+import { VscGithubAlt } from 'react-icons/vsc';
+import { AiOutlineSafetyCertificate } from 'react-icons/ai';
+import { TiContacts } from 'react-icons/ti';
 
-const HeaderNav = () => {
-    
-    const [navOpen, setNavOpen] = useState(false);
-
-    return(
-        <React.Fragment>
-            <Navbar className='navbar-dark fixed-top' expand="md">
-            <NavbarToggler onClick={() => setNavOpen(!navOpen)} />
-                    <NavbarBrand className="me-auto">
-                        <GoPerson />
-                    </NavbarBrand>
-                    <Collapse isOpen={navOpen} navbar>
-                        <Nav className='ms-auto' navbar>
-                            <NavItem>
-                                <NavLink className="nav-link"  to='/home'>
-                                    <><BiHome /> Home</>
-                                </NavLink>
-                            </NavItem>
-                            <NavItem>
-                                <NavLink className="nav-link"  to='/aboutMe'>
-                                    <><FaInfo /> About Me</>
-                                </NavLink>
-                            </NavItem>
-                            <NavItem>
-                                <NavLink className="nav-link"  to='/skillSet'>
-                                    <><GiSkills /> Skills</>
-                                </NavLink>
-                            </NavItem>
-                            <NavItem>
-                                <NavLink className="nav-link"  to='/projects'>
-                                    <><VscGithubAlt /> Projects</>
-                                </NavLink>
-                            </NavItem>
-                            <NavItem>
-                                <NavLink className="nav-link"  to='/certifications'>
-                                    <><AiOutlineSafetyCertificate /> Certifications</>
-                                </NavLink>
-                            </NavItem>
-                            <NavItem>
-                                <NavLink className="nav-link"  to='/contactMe'>
-                                    <><TiContacts /> Contact Me</>
-                                </NavLink>
-                            </NavItem>
-                        </Nav>
-                    </Collapse>
-            </Navbar>
-        </React.Fragment>
-    );
-}
+const NAV_ITEMS = [
+  { to: '/home', icon: <BiHome />, label: 'Home' },
+  { to: '/aboutMe', icon: <FaInfo />, label: 'About' },
+  { to: '/experience', icon: <FaBriefcase />, label: 'Experience' },
+  { to: '/skillSet', icon: <GiSkills />, label: 'Skills' },
+  { to: '/projects', icon: <VscGithubAlt />, label: 'Projects' },
+  { to: '/certifications', icon: <AiOutlineSafetyCertificate />, label: 'Certs' },
+  { to: '/contactMe', icon: <TiContacts />, label: 'Contact' },
+];
 
 const Header = () => {
+  const [menuOpen, setMenuOpen] = useState(false);
 
-    return(
-        <>
-            <HeaderNav />
-        </>
-    );
-}
+  return (
+    <header className="site-header">
+      <nav>
+        <NavLink to="/home" className="nav-brand" onClick={() => setMenuOpen(false)}>
+          SM
+        </NavLink>
+
+        <ul className="nav-links">
+          {NAV_ITEMS.map(({ to, icon, label }) => (
+            <li key={to}>
+              <NavLink to={to} className={({ isActive }) => isActive ? 'active' : ''}>
+                {icon} {label}
+              </NavLink>
+            </li>
+          ))}
+        </ul>
+
+        <button
+          className={`hamburger${menuOpen ? ' open' : ''}`}
+          onClick={() => setMenuOpen(!menuOpen)}
+          aria-label="Toggle navigation"
+        >
+          <span />
+          <span />
+          <span />
+        </button>
+      </nav>
+
+      <ul className={`mobile-menu${menuOpen ? ' open' : ''}`}>
+        {NAV_ITEMS.map(({ to, icon, label }) => (
+          <li key={to}>
+            <NavLink
+              to={to}
+              className={({ isActive }) => isActive ? 'active' : ''}
+              onClick={() => setMenuOpen(false)}
+            >
+              {icon} {label}
+            </NavLink>
+          </li>
+        ))}
+      </ul>
+    </header>
+  );
+};
 
 export default Header;
