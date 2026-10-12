@@ -1,62 +1,61 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { motion } from 'framer-motion';
 import Summary from './SummaryComponent';
 import { SKILLS_TEXT } from '../shared/SummaryData';
-import { Row, Col, CardTitle, CardImg, Spinner } from 'reactstrap';
-import axios from 'axios';
+import PortfolioImage from './UrlImageComponent';
 
-const SkillImageComponent = ({url="", alt="PHOTO"}) => {
+const LEVEL_BADGE = {
+  ADVANCED: 'badge-advanced',
+  INTERMEDIATE: 'badge-intermediate',
+  BEGINNER: 'badge-beginner',
+};
 
-    const [imageData, setImageData] = useState({});
-    const [isImageLoaded, setIsImageLoaded] = useState(false);
+const LEVEL_ORDER = ['ADVANCED', 'INTERMEDIATE', 'BEGINNER'];
 
-    const getImageFromUrl = () => {
-        axios.get(url, {
-            responseType: 'blob'
-          }).then((res) => {
-            setImageData(res);
-            setIsImageLoaded(true);
-        });
-    }
-
-    if(isImageLoaded) {
-        return(<CardImg src={URL.createObjectURL(imageData.data)} className="img-skill img-responsive rounded-circle" alt={alt}/>);
-    } else {
-        getImageFromUrl();
-        return(<Spinner className='skill-spinner'/>);
-    }
-}
-
-const SkillCard = ({skill}) => {
-    return(
-        <Col xs={12} md={6} lg={3}>
-            <SkillImageComponent url={skill.url} alt={skill.alt}/>
-            <CardTitle className='text-heading'>
-                <bold>{skill.level}</bold>
-            </CardTitle>
-        </Col>
-    );
-}
-
-const SkillContent = ({skillSet=[]}) => {
-
-    const info = skillSet.map((skill) => 
-        <SkillCard skill={skill} />
-    )
-
-    return(
-        <div className='content'>
-            <Row className='content-row'>{info}</Row>
-        </div>
-    );
-}
+const SkillCard = ({ skill, index }) => (
+  <motion.div
+    className="skill-card"
+    initial={{ opacity: 0, scale: 0.9 }}
+    whileInView={{ opacity: 1, scale: 1 }}
+    viewport={{ once: true, margin: '-40px' }}
+    transition={{ duration: 0.4, delay: index * 0.07 }}
+  >
+    <PortfolioImage url={skill.url} alt={skill.alt} className="skill-icon" />
+    <span className="skill-name">{skill.alt}</span>
+    <span className={LEVEL_BADGE[skill.level]}>{skill.level}</span>
+  </motion.div>
+);
 
 const SkillSet = () => {
-    return(
-        <>
-            <Summary info={SKILLS_TEXT.text} ques={SKILLS_TEXT.ques} url={SKILLS_TEXT.imgUrl} isImageLeft={true} />
-            <SkillContent skillSet={SKILLS_TEXT.skillSet}/>
-        </>
-    );
-}
+  const grouped = LEVEL_ORDER.reduce((acc, level) => {
+    acc[level] = SKILLS_TEXT.skillSet.filter((s) => s.level === level);
+    return acc;
+  }, {});
+
+  return (
+    <>
+      <Summary
+        info={SKILLS_TEXT.text}
+        ques={SKILLS_TEXT.ques}
+        url={SKILLS_TEXT.imgUrl}
+        isImageLeft
+      />
+      <div className="content">
+        <div className="content-inner">
+          {LEVEL_ORDER.map((level) => (
+            <div key={level} className="skill-group">
+              <div className="skill-group-label">{level}</div>
+              <div className="content-grid content-grid-4">
+                {grouped[level].map((skill, index) => (
+                  <SkillCard key={skill.alt} skill={skill} index={index} />
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </>
+  );
+};
 
 export default SkillSet;

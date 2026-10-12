@@ -1,74 +1,65 @@
 import React from 'react';
-import Summary from './SummaryComponent';
+import { Link } from 'react-router-dom';
 import Typewriter from 'typewriter-effect';
-import { Row, Col } from 'reactstrap';
 import { HOME_TEXT } from '../shared/SummaryData';
-import UrlImageComponent from './UrlImageComponent';
-
-const HomeHeading = () => {
-  return(
-    <>
-      <h1 className="heading">
-        Hi There!{" "}
-        <span className="wave" role="img" aria-labelledby="wave">
-          👋🏻
-        </span>
-      </h1>
-      <h1 className="heading-name">
-          My Name is<strong className="main-name"> BADINI SAI MAHADEV</strong>, I'm a
-      </h1>
-    </>
-  );
-}
-
-const HomeRoles = ({whoami}) => {
-  return (
-    <div className="type-text">
-      <strong>
-        <Typewriter 
-        options={{
-          strings: whoami,
-          autoStart: true,
-          loop: true,
-          delay: 5,
-          deleteSpeed: 5,
-        }} />
-      </strong>
-    </div>
-  );
-}
-
-const Introduction = ({whoami}) => {
-  return(
-    <>
-      <HomeHeading />
-      <HomeRoles whoami={whoami}/>
-    </>
-  );
-}
-
-const HomeContent = ({url, whoami}) => {
-  return(
-    <div className='content'>
-      <Row>
-        <Col md={7}>
-          <Introduction whoami={whoami}/>
-        </Col>
-        <Col md={5}>
-          <UrlImageComponent url={url} />
-        </Col>
-      </Row>
-    </div>
-  );
-}
+import PortfolioImage from './UrlImageComponent';
+import { FiArrowDown } from 'react-icons/fi';
 
 const Home = () => {
-    return(
-        <>
-            <Summary info={HOME_TEXT.text} ques={HOME_TEXT.ques} url={HOME_TEXT.imgUrl} isImageLeft={true}/>
-            <HomeContent url={HOME_TEXT.homeImgUrl} whoami={HOME_TEXT.whoami}/>
-        </>
-    );
-}
+  return (
+    <section className="hero">
+      <div className="hero-inner">
+        <div className="hero-text">
+          <p className="hero-greeting">
+            Hi There!{' '}
+            <span className="wave" role="img" aria-label="wave">
+              👋🏻
+            </span>
+          </p>
+
+          <h1 className="hero-name">BADINI SAI MAHADEV</h1>
+
+          <p className="hero-bio">
+            Passionate Android Developer with 6+ years of experience building
+            production-grade mobile applications at Samsung, Grab, and GXS Bank.
+            Proficient in Kotlin, Jetpack Compose, and modern Android architecture patterns.
+          </p>
+
+          <div className="hero-roles">
+            <Typewriter
+              options={{
+                strings: HOME_TEXT.whoami,
+                autoStart: true,
+                loop: true,
+                delay: 40,
+                deleteSpeed: 20,
+              }}
+            />
+          </div>
+
+          <div className="hero-cta">
+            <Link to="/projects" className="btn-primary-hero">
+              View Projects
+            </Link>
+            <Link to="/contactMe" className="btn-outline-hero">
+              Get In Touch
+            </Link>
+          </div>
+        </div>
+
+        <div className="hero-image-wrap">
+          <PortfolioImage
+            url={HOME_TEXT.homeImgUrl}
+            alt="Badini Sai Mahadev"
+          />
+        </div>
+      </div>
+
+      <div className="scroll-indicator" aria-hidden="true">
+        <FiArrowDown />
+      </div>
+    </section>
+  );
+};
 
 export default Home;

@@ -89,7 +89,7 @@ export const SKILLS_TEXT = {
         {
             url: "https://img.icons8.com/color/344/linux--v1.png",
             level: "BEGINNER",
-            alt: "ANDROID DEVELOPMENT"
+            alt: "LINUX"
         },
         {
             url: "https://img.icons8.com/color/344/docker.png",
@@ -238,7 +238,58 @@ export const CONTACT_TEXT = {
     ques: "HOW CAN YOU REACH OUT TO ME?",
     text: "I am an active member of the developer community and eager to connect with fellow professionals. Feel free to reach out to me on LinkedIn or GitHub.I am always open to discussing exciting projects and career opportunities. I believe in the power of open-source collaboration and encourage contributions to my repositories. My projects are designed to be accessible and I welcome forks and improvements from the community. I am passionate about learning and growth, and I believe that by sharing knowledge and collaborating on projects, we can all achieve more. I am particularly interested in AI/ML, cloud computing, mobile development.I look forward to connecting with you and exploring potential collaborations",
     imgUrl: "https://avatars.githubusercontent.com/u/75945683",
+    email: "mahadevvone@gmail.com",
     ghLink: "https://github.com/MahadevMaahi",
     lnLink: "https://in.linkedin.com/in/badini-sai-mahadev",
     lcLink: "https://leetcode.com/mahadevvone/"
+}
+
+export const EXPERIENCE_TEXT = {
+    ques: "WHERE HAVE I WORKED?",
+    text: "6+ years building production-grade Android applications at world-class companies — from system apps at Samsung to payment infrastructure and digital banking SDKs serving millions across Southeast Asia.",
+    imgUrl: "https://cdn.dribbble.com/users/2290234/screenshots/5336091/responsive.gif",
+    experiences: [
+        {
+            id: "gxs",
+            company: "GXS Bank",
+            role: "Android Developer",
+            period: "2024 – Present",
+            location: "Southeast Asia",
+            dotClass: "timeline-dot-gxs",
+            description: [
+                "Built end-to-end solutions for bank lending applications serving customers across Southeast Asian markets.",
+                "Developed full-scale production-level Android SDKs deployed across multiple Southeast Asian regions.",
+                "Owned the complete mobile SDK lifecycle — from architecture and development through testing and release."
+            ],
+            tech: ["Kotlin", "Jetpack Compose", "Android SDK", "Clean Architecture", "CI/CD"]
+        },
+        {
+            id: "grab",
+            company: "Grab",
+            role: "Android Developer",
+            period: "2021 – 2024",
+            location: "Southeast Asia",
+            dotClass: "timeline-dot-grab",
+            description: [
+                "Part of the Wallet and Fundsflow team, maintaining and evolving payment SDKs across 6 Southeast Asian regions.",
+                "Delivered reliable, high-performance payment flows for millions of Grab users in a high-stakes production environment.",
+                "Worked across consumer-facing features and SDK-layer code in the Grab superapp."
+            ],
+            tech: ["Kotlin", "Retrofit", "Dagger2", "Kotlin Coroutines", "Kotlin Flows", "MVVM"]
+        },
+        {
+            id: "samsung",
+            company: "Samsung",
+            role: "Android Developer",
+            period: "2019 – 2021",
+            location: "India",
+            dotClass: "timeline-dot-samsung",
+            description: [
+                "Worked on the Samsung Clock app — a preloaded system application shipped on hundreds of millions of Samsung devices.",
+                "Implemented World Clock widget features and alarm management functionality.",
+                "Gained deep expertise in Android system-level development and OEM app engineering constraints."
+            ],
+            tech: ["Kotlin", "Java", "Android SDK", "App Widgets", "MVVM"]
+        }
+    ]
 }

@@ -1,57 +1,37 @@
 import React from 'react';
-import Typewriter from 'typewriter-effect';
-import { Row, Col, CardTitle, CardBody} from 'reactstrap';
-import UrlImageComponent from './UrlImageComponent';
+import PortfolioImage from './UrlImageComponent';
 
-const Description = ({info, ques}) => {
-    return(
-        <div className='summary-text'>
-            <CardTitle>{ques}</CardTitle>
-            <CardBody>
-                <Typewriter 
-                    onInit={(typewriter) => {
-                        typewriter
-                        .changeDelay(10)
-                        .typeString(info)
-                        .start()
-                    }}/>
-            </CardBody>
-            </div>
-    );
-}
+const Summary = ({ info, url = '', ques = '', isImageLeft = true }) => {
+  const textBlock = (
+    <div className="jumbotron-text">
+      {ques && <div className="jumbotron-question">{ques}</div>}
+      <p className="jumbotron-description">{info}</p>
+    </div>
+  );
 
-const getSummaryContent = (info, url, ques, isImageLeft) => {
-    if(isImageLeft) {
-        return(
-            <Row>
-                <Col xs={12} md={3} >
-                    <UrlImageComponent url={url}/>
-                </Col>
-                <Col xs={12} md={9} >
-                    <Description info={info} ques={ques}/>
-                </Col>
-            </Row>
-        );
-    } else {
-        return(
-            <Row>
-                <Col xs={12} md={9} >
-                    <Description info={info} ques={ques}/>
-                </Col>
-                <Col xs={12} md={3} >
-                    <UrlImageComponent url={url}/>
-                </Col>
-            </Row>
-        );
-    }
-}
+  const imageBlock = (
+    <div className="jumbotron-image-wrap">
+      <PortfolioImage url={url} alt={ques} />
+    </div>
+  );
 
-const Summary = ({info, url="", ques="", isImageLeft=true}) => {
-    return(
-        <div className='jumbotron'>
-            {getSummaryContent(info, url, ques, isImageLeft)}
-        </div>
-    );
-}
+  return (
+    <div className="jumbotron">
+      <div className={`jumbotron-inner${isImageLeft ? ' image-left' : ''}`}>
+        {isImageLeft ? (
+          <>
+            {imageBlock}
+            {textBlock}
+          </>
+        ) : (
+          <>
+            {textBlock}
+            {imageBlock}
+          </>
+        )}
+      </div>
+    </div>
+  );
+};
 
 export default Summary;

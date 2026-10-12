@@ -1,63 +1,49 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { motion } from 'framer-motion';
 import Summary from './SummaryComponent';
-import { Row, Col, CardTitle, CardImg, Spinner, Card, CardBody } from 'reactstrap';
 import { PROJECTS_TEXT } from '../shared/SummaryData';
-import axios from 'axios';
+import { VscGithubAlt } from 'react-icons/vsc';
+import { FiFolder } from 'react-icons/fi';
 
-const ProjectImageComponent = ({url="", alt="PHOTO"}) => {
+const ProjectCard = ({ project, index }) => (
+  <motion.a
+    href={project.link}
+    className="project-card"
+    target="_blank"
+    rel="noopener noreferrer"
+    initial={{ opacity: 0, y: 30 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    viewport={{ once: true, margin: '-50px' }}
+    transition={{ duration: 0.45, delay: index * 0.08 }}
+  >
+    <div className="project-card-header">
+      <FiFolder className="project-folder-icon" />
+      <VscGithubAlt className="project-github-icon" />
+    </div>
+    <div className="project-title">{project.title}</div>
+    <p className="project-description">{project.description}</p>
+  </motion.a>
+);
 
-    const [imageData, setImageData] = useState({});
-    const [isImageLoaded, setIsImageLoaded] = useState(false);
-
-    const getImageFromUrl = () => {
-        axios.get(url, {
-            responseType: 'blob'
-          }).then((res) => {
-            setImageData(res);
-            setIsImageLoaded(true);
-        });
-    }
-
-    if(isImageLoaded) {
-        return(<CardImg src={URL.createObjectURL(imageData.data)} className="img-skill img-responsive rounded-circle m-auto" alt={alt}/>);
-    } else {
-        getImageFromUrl();
-        return(<Spinner className='skill-spinner m-auto'/>);
-    }
-}
-
-const ProjectCard = ({project}) => {
-    return(
-        <Col xs={12} md={6} lg={3}>
-            <a href={project.link} className="project-links" target="_blank" rel='noreferrer'>
-                <Card className='project-card'>
-                    <ProjectImageComponent url={project.url} alt={project.alt}/>
-                    <CardTitle className='text-heading'><bold>{project.title}</bold></CardTitle>
-                    <CardBody>{project.description}</CardBody>
-                </Card>
-            </a>
-        </Col>
-    );
-}
-
-const ProjectContent = ({projectData=[]}) => {
-    const info = projectData.map((project) => 
-        <ProjectCard project={project} />
-    )
-    return(
-        <div className='content'>
-            <Row className='content-row'>{info}</Row>
+const Projects = () => (
+  <>
+    <Summary
+      info={PROJECTS_TEXT.text}
+      ques={PROJECTS_TEXT.ques}
+      url={PROJECTS_TEXT.imgUrl}
+      isImageLeft={false}
+    />
+    <div className="content">
+      <div className="content-inner">
+        <h2 className="section-heading">Things I've built</h2>
+        <div className="content-grid content-grid-3">
+          {PROJECTS_TEXT.projectData.map((project, index) => (
+            <ProjectCard key={project.title} project={project} index={index} />
+          ))}
         </div>
-    );
-}
-
-const Projects = () => {
-    return(
-        <>
-            <Summary info={PROJECTS_TEXT.text} ques={PROJECTS_TEXT.ques} url={PROJECTS_TEXT.imgUrl} isImageLeft={false} />
-            <ProjectContent projectData={PROJECTS_TEXT.projectData}/>
-        </>
-    );
-}
+      </div>
+    </div>
+  </>
+);
 
 export default Projects;
